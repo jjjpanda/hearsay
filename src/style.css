@@ -1420,6 +1420,10 @@ thead th:last-child {
   padding-top: 4px;
 }
 
+:host(:is([embed=""], [embed=true])) .stage {
+  flex: 1;
+}
+
 :host(:is([embed=""], [embed=true])) .figures {
   padding: 6px 0;
   gap: 6px 18px;
