@@ -1,0 +1,26 @@
+{
+  "name": "marketsim",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "A synthetic order-flow market with traders, private information, and a matching order book, packaged as a web component",
+  "exports": {
+    ".": "./marketsim.js",
+    "./sim": "./src/sim.js",
+    "./model": "./src/model.js"
+  },
+  "files": ["marketsim.js", "src"],
+  "scripts": {
+    "dev": "node scripts/serve.js",
+    "build": "node scripts/build.js",
+    "preview": "node scripts/serve.js dist",
+    "verify": "npm test && npm run build && npm run check:http",
+    "test": "node --test",
+    "benchmark": "node scripts/benchmark.js",
+    "check:browser": "node scripts/browser-check.js",
+    "check:http": "node scripts/http-check.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
